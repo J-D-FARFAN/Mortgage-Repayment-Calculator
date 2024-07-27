@@ -1,6 +1,6 @@
 @import url(../main.css);
 
-@media screen and (max-width: 376px){
+@media screen and (min-width:212px) and (max-width: 423px){
     body{
         .content__all{
             margin: 0;
