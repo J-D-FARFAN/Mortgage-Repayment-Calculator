@@ -1,0 +1,117 @@
+@import url(styles.css);
+@import url(layout/media768.css);
+@import url(layout/media375.css);
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root{
+    /*Colors Styles*/
+    --colorLime: #D8DB2F;
+    --colorRed: #D73328;
+    --colorWhite: #FFFFFF;
+
+    --slate-100: #E4F4FD;
+    --slate-300: #9ABED5;
+    --slate-500: #6B94A8;
+    --slate-700: #4E6E7E;
+    --slate-900: #133041;
+
+    /*Typography*/
+    --txtPreset-1: 56px;
+    --txtPreset-2: 24px;
+    --txtPreset-3: 18px;
+    --txtPreset-4: 16px;
+    --txtPreset-5: 14px;
+    --fontFamily: "Plus Jakarta Sans", sans-serif;
+
+    /*Spacing*/
+    --spacingPreset-1: 40px;
+    --spacingPreset-2: 32px;
+    --spacingPreset-3: 24px;
+    --spacingPreset-4: 16px;
+    --spacingPreset-5: 12px;
+    --spacingPreset-6: 8px;
+
+    /*Border Radius*/
+    --borderPreset-1: 24px;
+    --borderPreset-2: 80px;
+    --borderPreset-3: 4px
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fontFamily)
+}
+
+.txt{
+    color: var(--slate-300);                   
+    font-size: var(--txtPreset-4);
+    line-height: 150%;
+}
+
+.bx--contentInputs-and-icons{
+    position: relative;
+    height: fit-content;
+    margin-top: var(--spacingPreset-5);
+    border-radius: var(--borderPreset-3);
+    overflow: hidden;
+
+    .icon{
+        position: absolute;
+        left: .5px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: var(--borderPreset-3) 0px 0px var(--borderPreset-3);
+        transition: .3s ease;
+
+        padding: 12px 16px;
+        background-color: var(--slate-100);
+        color: var(--slate-700);
+        font-weight: bold;
+        height: 97%;
+    }
+
+    .positionOtherIcons{
+        position: absolute;
+        right: .5px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 0px var(--borderPreset-3) var(--borderPreset-3) 0px;
+        transition: .3s ease;
+
+        padding: 12px 16px;
+        background-color: var(--slate-100);
+        color: var(--slate-700);
+        font-weight: bold;
+        height: 97%;
+    }
+
+}
+
+
+.bx--contentInputs-and-icons.activeIcons{
+    border-color: var(--colorLime);
+    .icon, .positionOtherIcons{
+        background-color: var(--colorLime);
+    }
+}
+
+.bx--contentInputs-and-icons.errorValue{
+    border-color: var(--colorRed);
+    .icon, .positionOtherIcons{
+        background-color: var(--colorRed);
+        color: var(--colorWhite);
+    }
+}
+
+.errorMessage, .errorMessageType{
+    display: none;
+    margin-top: var(--spacingPreset-5);
+    color: var(--colorRed);
+    font-size: var(--txtPreset-5);
+}
+
+#mortgageAmount{
+    padding-left: 44px;
+}

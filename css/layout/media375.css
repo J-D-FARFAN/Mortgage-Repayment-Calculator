@@ -1,0 +1,46 @@
+@import url(../main.css);
+
+@media screen and (max-width: 376px){
+    body{
+        .content__all{
+            margin: 0;
+            border-radius: 0;
+
+            .content__allForm{
+                padding: var(--spacingPreset-2) var(--spacingPreset-3);
+                .headerForm{
+                    flex-direction: column;
+                    align-items: start;
+                    gap: var(--spacingPreset-6);
+                }
+
+                .contentInputs--years-and-ratePorcent{
+                    flex-direction: column;
+                    gap: 0;
+                }
+
+                .bx-btnSubmit{
+                    .submitForm{
+                        width: 100%;
+                    }
+                }
+            }
+
+            .contentResutlForm--empty--result{
+                padding: var(--spacingPreset-2) var(--spacingPreset-3);
+
+                .resultForm{
+                    .txt{margin-bottom: var(--spacingPreset-3);}
+                    
+                    .bx-resultSection{
+                        padding: var(--spacingPreset-3) var(--spacingPreset-4);
+                        
+                        .lineSeparator{
+                            margin: var(--spacingPreset-4) 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

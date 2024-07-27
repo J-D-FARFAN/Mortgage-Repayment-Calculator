@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/app.js"></script>
+</head>
+
+<body>
+  <main class="content__all">
+    <form class="content__allForm">
+      <header class="headerForm">
+        <h1 class="title">Mortgage Calculator</h1>
+        <span class="clearContent">Clear All</span>
+      </header>
+
+      <section class="bx--inputs-and-labelsForm">
+        <label class="labelsForm">Mortgage Amount</label>
+        <div class="bx--contentInputs-and-icons">
+          <input type="text" class="inputsForm" id="mortgageAmount" />
+          <span class="icon activeIconInput">£</span>
+        </div>
+        <span class="errorMessage">This field is required</span>
+      </section>
+
+      <section class="contentInputs--years-and-ratePorcent">
+        <div class="bx--inputs-and-labelsForm">
+          <label class="labelsForm">Mortgage Term</label>
+          <div class="bx--contentInputs-and-icons">
+            <input type="text" class="inputsForm" id="mortgageTerm" />
+            <span class="positionOtherIcons activeIconInput">years</span>
+          </div>
+          <span class="errorMessage">This field is required</span>
+        </div>
+
+        <div class="bx--inputs-and-labelsForm">
+          <label class="labelsForm">Interest Rate</label>
+          <div class="bx--contentInputs-and-icons">
+            <input type="text" class="inputsForm" id="interestRate" />
+            <span class="positionOtherIcons activeIconInput">%</span>
+          </div>
+          <span class="errorMessage">This field is required</span>
+        </div>
+      </section>
+
+      <section class="contentInpustTypeRadio-selectedOnlyOption">
+        <label class="labelsForm">Mortgage Type</label>
+
+        <section class="contentInputsTypeRadio">
+          <div class="bx-inputRadio">
+            <input class="inputsRadio" type="checkbox" id="Repayment" />
+            <label class="repayment labelsInputsRadio">Repayment</label>
+          </div>
+
+          <div class="bx-inputRadio">
+            <input class="inputsRadio" type="checkbox" id="InterestOnly" />
+            <label class="interestOnly labelsInputsRadio" for="InterestOnly">Interest Only</label>
+          </div>
+        </section>
+        <span class="errorMessageType">This field is required</span>
+      </section>
+
+      <div class="bx-btnSubmit">
+        <button class="submitForm" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#133041" d="M18.75 2.25H5.25a1.5 1.5 0 0 0-1.5 1.5v16.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V3.75a1.5 1.5 0 0 0-1.5-1.5Zm-10.5 16.5a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 18.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 15a1.125 1.125 0 1 1 0-2.25A1.125 1.125 0 0 1 12 15Zm3.75 3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm1.5-5.25a.75.75 0 0 1-.75.75h-9a.75.75 0 0 1-.75-.75V6a.75.75 0 0 1 .75-.75h9a.75.75 0 0 1 .75.75v3.75Z"/></svg> Calculate Repayments</button>
+      </div>
+    </form>
+
+    <article class="contentResutlForm--empty--result">
+      <section class="emptyResultForm">
+        <img src="assets/images/illustration-empty.svg" alt="Illustration Empty" class="illustrationEmpty" />
+
+        <div class="introductionResultEmptyForm">
+          <h2 class="titleIntroductionForm">Results shown here</h2>
+          <p class="txt">
+            Complete the form and click “calculate repayments” to see what
+            your monthly repayments would be.
+          </p>
+        </div>
+      </section>
+
+      <section class="resultForm">
+        <h2 class="titleResult">Your Results</h2>
+        <p class="txt">Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
+
+        <figure class="bx--resultSection">
+          <div class="result">
+            <span class="monthlyRepayments">Your monthly repayments</span>
+            <span class="bx-numberResult">£<span class="numberResult">0.00</span></span>
+          </div>
+
+          <div class="lineSeparator"></div>
+
+          <div class="result">
+            <span class="monthlyRepayments">Total you'll repay over the term</span>
+            <span class="bx-numberResultTotal">£<span class="numberResultTotal">0.00</span></span>
+          </div>
+        </figure>
+      </section>
+    </article>
+  </main>
+</body>
+
+</html>

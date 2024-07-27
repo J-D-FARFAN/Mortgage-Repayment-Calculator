@@ -1,0 +1,15 @@
+@import url(../main.css);
+
+@media screen and (max-width: 769px){
+    body{
+        height: 100%;
+        .content__all{
+            width: 100%;
+            margin: var(--spacingPreset-1);
+            flex-direction: column;
+
+            .content__allForm{width: 100%;}
+            .contentResutlForm--empty--result{width: 100%; border-radius: 0;}
+        }
+    }
+}
